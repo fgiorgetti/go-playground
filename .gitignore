@@ -13,3 +13,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# IDE
+.idea/
+
+# Project specific files
+bashcomp/bashcomp
+bashcomp/bashcomp.bash.inc
