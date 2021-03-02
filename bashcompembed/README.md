@@ -1,4 +1,4 @@
-# Bash Completion Example using Cobra Command API
+# Bash Completion Example using Cobra Command API (Updated to use go:embed)
 
 This example demonstrates how to use bash completion along with
 [Cobra Command API](https://github.com/spf13/cobra).
@@ -6,15 +6,18 @@ This example demonstrates how to use bash completion along with
 
 ## The sample application
 
-A sample application is produced here, named `bashcomp`.
+A sample application is produced here, named `bashcompembed`.
 
-It demonstrates an approach to integrate bash completion with a Go application
+This is just an update to the previous `bashcomp` sample, that uses `go:embed`
+available as of `go 1.16`.
+
+It also demonstrates an approach to integrate bash completion with a Go application
 using Cobra.
 
 In this example, the complete function is defined in a separate shell script
 file named `bash_completion.sh`.
 
-The contents from `bash_completion.sh` will be bound to the `BashCompletionEncoded`
+The contents from `bash_completion.sh` will be bound to the `BashCompletionFunction`
 variable at build time, allowing you to write your complete function more easily.
 
 
@@ -26,16 +29,16 @@ To build the application and produce a bash completion shell script, run;
 make
 ```
 
-After building it, you can simply source the produced `bashcomp.bash.inc` file, like:
+After building it, you can simply source the produced `bashcompembed.bash.inc` file, like:
 
 ```
-source bashcomp.bash.inc
+source bashcompembed.bash.inc
 ```
 
 ## Running and validating auto complete options
 
-Type `bashcomp <tab><tab>` and you will see the list of available options.
-If you want to try a more specific one, type: `bashcomp thanks <tab><tab>`.
+Type `bashcompembed <tab><tab>` and you will see the list of available options.
+If you want to try a more specific one, type: `bashcompembed thanks <tab><tab>`.
 
 
 ***NOTE:***

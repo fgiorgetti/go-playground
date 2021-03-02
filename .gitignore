@@ -20,3 +20,5 @@
 # Project specific files
 bashcomp/bashcomp
 bashcomp/bashcomp.bash.inc
+bashcompembed/bashcompembed
+bashcompembed/bashcompembed.bash.inc
