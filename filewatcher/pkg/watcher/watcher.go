@@ -46,7 +46,6 @@ func NewWatcher(name string, stopCh chan bool, handler FSChangeHandler) error {
 
 	go func() {
 		for {
-			log.Println("Watchers:", watcher.WatchList())
 			select {
 			case event := <-watcher.Events:
 				switch {
